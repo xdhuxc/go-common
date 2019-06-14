@@ -64,6 +64,7 @@ const (
 	OperatingResourceTemplate
 	OperatingResourceApplication
 	OperatingResourceStep
+	OperatingResourceShareKey
 )
 
 type OperationAudit struct {
@@ -126,6 +127,8 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "上线审批申请"
 	case OperatingResourceStep:
 		return "上线审批流程"
+	case OperatingResourceShareKey:
+		return "ShareKey"
 	}
 	return ""
 }

@@ -64,6 +64,9 @@ const (
 	OperatingResourceTemplate
 	OperatingResourceApplication
 	OperatingResourceStep
+	OperatingResourceRole
+	OperatingResourceResource
+	OperatingResourceShareidUser
 	OperatingResourceShareKey
 )
 
@@ -127,6 +130,12 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "上线审批申请"
 	case OperatingResourceStep:
 		return "上线审批流程"
+	case OperatingResourceRole:
+		return "角色"
+	case OperatingResourceResource:
+		return "资源"
+	case OperatingResourceShareidUser:
+		return "shareit用户管理"  
 	case OperatingResourceShareKey:
 		return "ShareKey"
 	}

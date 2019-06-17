@@ -67,6 +67,7 @@ const (
 	OperatingResourceRole
 	OperatingResourceResource
 	OperatingResourceShareidUser
+	OperatingResourceShareKey
 
 
 )
@@ -137,6 +138,8 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "资源"
 	case OperatingResourceShareidUser:
 		return "shareit用户管理"  
+	case OperatingResourceShareKey:
+		return "ShareKey"
 	
 	}
 	return ""

@@ -70,6 +70,7 @@ const (
 	OperatingResourceShareidSystem
 	OperatingResourceShareidChangePwd
 	OperatingResourceShareKey
+	OperatingResourceAksk
 )
 
 type OperationAudit struct {
@@ -141,10 +142,12 @@ func (o *OperationAudit) GetOperationResource() string {
 	case OperatingResourceShareidSystem:
 		return "shareit系统管理"
 	case OperatingResourceShareidChangePwd:
-                return "用户修改shareid密码"
+		return "用户修改shareid密码"
 	case OperatingResourceShareKey:
 		return "ShareKey"
-	
+	case OperatingResourceAksk:
+		return "Aksk"
+
 	}
 	return ""
 }

@@ -71,6 +71,7 @@ const (
 	OperatingResourceShareidChangePwd
 	OperatingResourceShareKey
 	OperatingResourceAksk
+	OperatingResourceIngress
 )
 
 type OperationAudit struct {
@@ -147,6 +148,8 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "ShareKey"
 	case OperatingResourceAksk:
 		return "Aksk"
+	case OperatingResourceIngress:
+		return "Ingress"
 
 	}
 	return ""

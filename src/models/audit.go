@@ -72,6 +72,7 @@ const (
 	OperatingResourceShareKey
 	OperatingResourceAksk
 	OperatingResourceIngress
+	OperatingResourcePvc
 )
 
 type OperationAudit struct {
@@ -150,6 +151,8 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "Aksk"
 	case OperatingResourceIngress:
 		return "Ingress"
+	case OperatingResourcePvc:
+		return "存储"
 
 	}
 	return ""

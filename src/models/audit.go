@@ -73,6 +73,7 @@ const (
 	OperatingResourceAksk
 	OperatingResourceIngress
 	OperatingResourcePvc
+	OperatingResourceCronHpa
 )
 
 type OperationAudit struct {
@@ -153,6 +154,8 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "Ingress"
 	case OperatingResourcePvc:
 		return "存储"
+	case OperatingResourceCronHpa:
+		return "CronHpa"
 
 	}
 	return ""

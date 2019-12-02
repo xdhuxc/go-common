@@ -76,6 +76,8 @@ const (
 	OperatingResourceCronHpa
 	OperatingResourceDockerImage
 	OperatingResourceDockerImageTag
+	OperatingResourceDomain
+	OperatingResourceDomainRecord
 )
 
 type OperationAudit struct {
@@ -162,7 +164,12 @@ func (o *OperationAudit) GetOperationResource() string {
 		return "Docker 镜像"
 	case OperatingResourceDockerImageTag:
 		return "Docker 镜像标签"
+	case OperatingResourceDomain:
+		return "域名"
+	case OperatingResourceDomainRecord:
+		return "域名记录"
 	}
+
 	return ""
 }
 
